@@ -18,3 +18,8 @@ add_executable(Lab2 Module2/Lab2/lab2.cpp)
 add_executable(FtoC Module3/HW3/FtoC/FtoC.cpp)
 add_executable(VendingMachine Module3/HW3/VendingMachine/VendingMachine.cpp)
 add_executable(CalorieCalculator Module3/HW3/CalorieCalculator/CalorieCalculator.cpp)
+
+#Module 4
+add_executable(Sphere Module4/HW4/Sphere/Sphere.cpp)
+add_executable(FloorToCeiling Module4/HW4/FloorToCeiling/FloorToCeiling.cpp)
+add_executable(Trigonometry Module4/HW4/Trigonometry/Trigonometry.cpp)
