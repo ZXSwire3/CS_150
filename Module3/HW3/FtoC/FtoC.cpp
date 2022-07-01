@@ -22,17 +22,23 @@ int main() {
 	int fahrenheit; //temperature in fahrenheit
 	double celsius; //temperature in celsius
 
+    //Print greeting and tell user how to exit program
     cout << "Welcome to the Fahrenheit to Celsius Converter!"
             "\nType anything other than an int to exit the program" << endl << endl;
 
+    //Loop until the user inputs anything besides an int
 	do {
+        //Prompt user for a temperature in fahrenheit
 		cout << "Please enter a temperature (in Fahrenheit and an int only):";
 		cin >> fahrenheit;
+        //if input is not an int then exit the program
         if (!cin.good()) {
             cout << "Thank you for using the Fahrenheit to Celsius Converter";
             return 0;
         }
+        //calculate the celsius from fahrenheit
 		celsius = 5 * (fahrenheit - 32) / 9.0;
+        //Print out the degrees in fahrenheit and what is equal to in celsius
 		cout << fahrenheit << " degrees Fahrenheit = " << celsius << " degrees Celsius" << endl << endl;
 
 	} while (cin.good());

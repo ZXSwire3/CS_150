@@ -11,9 +11,9 @@ add_executable(UberCharge Module2/HW2/UberCharge/UberCharge.cpp)
 add_executable(HolidayGifts Module2/HW2/HolidayGifts/HolidayGifts.cpp)
 add_executable(Feet Module2/HW2/Feet/Feet.cpp)
 add_executable(Haiku Module2/HW2/Haiku/Haiku.cpp
-]]
 
 add_executable(Lab2 Module2/Lab2/lab2.cpp)
+
 #Homework 3
 add_executable(FtoC Module3/HW3/FtoC/FtoC.cpp)
 add_executable(VendingMachine Module3/HW3/VendingMachine/VendingMachine.cpp)
@@ -23,3 +23,10 @@ add_executable(CalorieCalculator Module3/HW3/CalorieCalculator/CalorieCalculator
 add_executable(Sphere Module4/HW4/Sphere/Sphere.cpp)
 add_executable(FloorToCeiling Module4/HW4/FloorToCeiling/FloorToCeiling.cpp)
 add_executable(Trigonometry Module4/HW4/Trigonometry/Trigonometry.cpp)
+]]
+#Module 5
+add_executable(ArtSupplies Module5/HW5/ArtSupplies/ArtSupplies.cpp)
+add_executable(Names Module5/HW5/Names/Names.cpp)
+add_executable(Arithmetic Module5/HW5/ArithmeticProblem/ArithmeticProblem.cpp)
+
+add_executable(FormatBudget Module5/Lab5/FormatBudget/FormatBudget.cpp)
