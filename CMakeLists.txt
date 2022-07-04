@@ -23,10 +23,14 @@ add_executable(CalorieCalculator Module3/HW3/CalorieCalculator/CalorieCalculator
 add_executable(Sphere Module4/HW4/Sphere/Sphere.cpp)
 add_executable(FloorToCeiling Module4/HW4/FloorToCeiling/FloorToCeiling.cpp)
 add_executable(Trigonometry Module4/HW4/Trigonometry/Trigonometry.cpp)
-]]
+
+add_executable(FloorToCeiling Module4/HW4/FloorToCeiling/FloorToCeiling.cpp)
 #Module 5
 add_executable(ArtSupplies Module5/HW5/ArtSupplies/ArtSupplies.cpp)
 add_executable(Names Module5/HW5/Names/Names.cpp)
 add_executable(Arithmetic Module5/HW5/ArithmeticProblem/ArithmeticProblem.cpp)
 
 add_executable(FormatBudget Module5/Lab5/FormatBudget/FormatBudget.cpp)
+]]
+
+add_executable(height Module6/HW6/Height/Height.cpp)

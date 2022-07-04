@@ -16,7 +16,8 @@
 
 using namespace std;
 
-int main() {
+int main()
+{
 
     double number;
     double floorNumber;
@@ -31,8 +32,10 @@ int main() {
     ceilingNumber = ceil(number);
 
     //Print user input, floorNumber and ceilingNumber
-    cout << "You entered " << number << ", the floor of this number is " << floorNumber
-         << " and the ceiling of this number is " << ceilingNumber;
+    cout << "You entered " << number << endl
+         << "the floor of this number is " << floorNumber << endl
+         << "the ceiling of this number is " << ceilingNumber << endl
+         <<"the absolute value of this number is "<< abs((int) number);
 
     return 0;
 }
