@@ -34,3 +34,6 @@ add_executable(FormatBudget Module5/Lab5/FormatBudget/FormatBudget.cpp)
 ]]
 
 add_executable(height Module6/HW6/Height/Height.cpp)
+add_executable(calories Module6/HW6/CalorieCalculator2/CalorieCalculator2.cpp)
+
+add_executable(train Module6/Lab6/trainTickets.cpp)

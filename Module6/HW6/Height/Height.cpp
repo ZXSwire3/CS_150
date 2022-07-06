@@ -1,23 +1,26 @@
-/* ArtSupplies - Prompts the user for how many of each item the would like to buy and prints out a nicely formatted receipt.
+/* Height - Prompts the user for their father and mother's height to predict what their height will be.
  * Author: Ben Foltz
  * Module: 5
- * Project: Homework 5, project 1
- * Problem Statement: This program asks the user for how many of each item they would like to purchase and then prints
- *                    out a nicely formatted receipt.
+ * Project: Homework 6, project 1
+ * Problem Statement: This program asks the user for the height of their parents and will predict what their height
+ *                    will be when they are an adult.
  * Algorithm:
- * 1. Instantiate the constant variables, pencilPrice (double), sketchPrice (double), and eraserPrice (double)
- * 2. Instantiate variables for the quantity pencils (int), sketch pads (int), and erasers (int)
- * 3. Prompt the user for how many of each item they would like to purchase
- * 4. Instantiate variables for double pencilTotal = pencilQuantity * pencilPrice
- *                              double sketchTotal = sketchQuantity * sketchPrice
- *                              double eraserTotal = eraserQuantity * eraserPrice
- *                              double total = pencilTotal + sketchTotal + eraserTotal
- * 5. Set the precision of the doubles to two variable places
- * 6. Print out the item, how many were purchased, the price of each item, the total for each item and then the grand
- *    total. Use setw to add spaced between everything to have the numbers line up in columns
+ * 1. Instantiate variables for feet (int), inches (int), input (string), gender (string), isMale (bool),
+ *                              heightMotherTotalInches (int), heightFatherTotalInches (int)
+ * 2. Prompt the user for how tall their father and mother are in feet and inches
+ * 3. Convert feet to inches and add that with the inches inputted and set heightMotherTotalInches and
+ *    heightFatherTotalInches equal to that
+ * 4. Prompt user for their gender
+ * 5. if user's gender is "male" then set isMale to true, if user's gender is "female" set isMale to false, otherwise
+ *    print "unknown gender"
+ * 6. Estimate the height of the child as an adult with the formulas
+ *          heightMaleChild = ((heightMotherTotalInches * 13 / 12) + heightFatherTotalInches) / 2);
+ *          heightFemaleChild = ((heightFatherTotalInches * 12 / 13) + heightMotherTotalInches) / 2)
+ * 7. if isMale = true then gender = "Male", adultFeet = heightMaleChild / 12 , adultInches = heightMaleChild % 12
+ *    else if isMale = false then gender = "Female", adultFeet = heightFemaleChild / 12 , adultInches = heightFemaleChild % 12
+ * 8. Print out the predicted height in the form X'Y"
  */
 #include <iostream>
-#include <iomanip>
 #include <algorithm>
 #include <cmath>
 
@@ -36,72 +39,86 @@ int main()
     int heightMotherTotalInches;
     int heightFatherTotalInches;
 
-    int motherFeet;
-    int motherInches;
 
-    int fatherFeet;
-    int fatherInches;
+    //loop until feet = -1
+    do
+    {
+        //Prompt user for the height of their father
+        cout << "What is your father's height?" << endl;
+        cout << "How many feet? ";
+        cin >> feet;
+        cout << "How many inches? ";
+        cin >> inches;
 
-    cout << "What is your father's height?" << endl;
-    cout << "How many feet? ";
-    cin >> feet;
-    cout << "How many inches? ";
-    cin >> inches;
+        //convert from feet to inches
+        inches += feet * 12;
+        heightFatherTotalInches = inches;
 
-    fatherFeet = feet;
-    fatherInches = inches;
+        cout << "What is your mother's height?" << endl;
+        cout << "How many feet? ";
+        cin >> feet;
+        cout << "How many inches? ";
+        cin >> inches;
 
-    inches += feet * 12;
-    heightFatherTotalInches = inches;
+        //convert from feet to inches
+        inches += feet * 12;
+        heightMotherTotalInches = inches;
 
-    cout << "What is your mother's height?" << endl;
-    cout << "How many feet? ";
-    cin >> feet;
-    cout << "How many inches? ";
-    cin >> inches;
+        //Prompt user for their gender
+        cout << "Are you male or female? ";
+        cin >> input;
 
-    motherFeet = feet;
-    motherInches = inches;
+        //convert input to lowercase
+        transform(input.begin(), input.end(), input.begin(), ::tolower);
 
-    inches += feet * 12;
-    heightMotherTotalInches = inches;
+        if (equal(input.begin(), input.end(), "male")) //if input is "male"
+        {
+            isMale = true;
+        }
+        else if (equal(input.begin(), input.end(), "female")) //if input is "female"
+        {
+            isMale = false;
+        }
+        else //if input is not "male" or "female"
+        {
+            cout << "Unknown Gender";
+        }
 
-    cout << "Are you male or female? ";
-    cin >> input;
+        //calculate the height of the male and female child
+        const int heightMaleChild = round(((heightMotherTotalInches * 13 / 12.0) + heightFatherTotalInches) / 2.0);
+        const int heightFemaleChild = round(((heightFatherTotalInches * 12 / 13.0) + heightMotherTotalInches) / 2.0);
 
-    transform(input.begin(), input.end(), input.begin(), ::tolower);
+        //how many feet the adult child will be
+        int adultFeet;
+        //how many inches the adult child will be
+        int adultInches;
+        //the adult child's height in the format X'Y"
+        string adultHeight;
 
-    if (equal(input.begin(), input.end(), "male")) {
-        isMale = true;
-    } else if (equal(input.begin(), input.end(), "female")) {
-//        cout << "female";
-        isMale = false;
-    } else {
-        cout << "Unknown Gender";
-    }
+        if (isMale) //if male
+        {
+            gender = "Male";
+            //convert from inches to feet
+            adultFeet = heightMaleChild / 12;
+            //take the leftover inches and put in adultInches
+            adultInches = heightMaleChild % 12;
 
-    const int heightMaleChild = round(((heightMotherTotalInches * 13 / j0(12)) + heightFatherTotalInches) / j0(2));
-    cout << heightMaleChild;
-    const int heightFemaleChild = ((heightFatherTotalInches * 12 / 13) + heightMotherTotalInches) / 2;
+        }
+        else if (!isMale) //if female
+        {
+            gender = "Female";
+            //convert from inches to feet
+            adultFeet = heightFemaleChild / 12;
+            //take the leftover inches and put in adultInches
+            adultInches = heightFemaleChild % 12;
+        }
 
-    int adultFeet;
-    int adultInches;
-    string adultHeight;
+        //format the adult child's height
+        adultHeight.append(to_string(adultFeet) + "\'" + to_string(adultInches) + "\"");
 
-    if (isMale) {
-        gender = "Male";
-        cout << round(heightMaleChild);
-        adultFeet = round(heightMaleChild) / 12;
-        adultInches = heightMaleChild % 12;
+        //print out the height of the child's predicted height
+        cout << "You are " << gender << ", I predict that your height will be " << adultHeight << endl << endl;
+    } while (feet != -1);
 
-    } else if (!isMale) {
-        gender = "Female";
-        adultFeet = heightFemaleChild / 12;
-        adultInches = heightFemaleChild % 12;
-    }
-
-    adultHeight.append(to_string(adultFeet) + "\'" + to_string(adultInches) + "\"");
-
-    cout << "You are " << gender << ", I predict that your height will be " << adultHeight;
     return 0;
 }
