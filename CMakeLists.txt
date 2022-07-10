@@ -31,9 +31,14 @@ add_executable(Names Module5/HW5/Names/Names.cpp)
 add_executable(Arithmetic Module5/HW5/ArithmeticProblem/ArithmeticProblem.cpp)
 
 add_executable(FormatBudget Module5/Lab5/FormatBudget/FormatBudget.cpp)
-]]
 
+#Module 6
 add_executable(height Module6/HW6/Height/Height.cpp)
 add_executable(calories Module6/HW6/CalorieCalculator2/CalorieCalculator2.cpp)
 
 add_executable(train Module6/Lab6/trainTickets.cpp)
+]]
+
+add_executable(CarRental Module7/Lab7/CarRental/CarRental.cpp)
+add_executable(GeometricFigure Module7/HW7/GeometricFigure/GeometricFigure.cpp)
+add_executable(TakeTheTrain Module7/HW7/TakeTheTrain/TakeTheTrain.cpp)
