@@ -1,6 +1,6 @@
 /* GeometricFigure - Prompts the user for what shape they would like to find the area of.
  * Author: Ben Foltz
- * Module: 5
+ * Module: 7
  * Project: Homework 7, project 1
  * Problem Statement: This program prompts the user to select one of the options to calculate the area of a circle,
  *                    rectangle, or triangle.
