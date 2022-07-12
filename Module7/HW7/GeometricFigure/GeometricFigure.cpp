@@ -8,7 +8,7 @@
  * 1. Instantiate variables radius, circleArea, length, width, rectangleArea, base, height, and triangleArea.
  * 2. Print out menu. C - Calculate the area of a Circle
  *                    R - Calculate the area of a Rectangle
- *                    T - Calculate the area of a Triangle
+ *                    T - Calculate the area of a PrintTriangle
  *                    Q - Quit
  * 3. Prompt user for input
  * 4. Switch on the first letter of the input from the user
@@ -45,7 +45,7 @@ int main()
          << endl
          << "C - Calculate the area of a Circle" << endl
          << "R - Calculate the area of a Rectangle" << endl
-         << "T - Calculate the area of a Triangle" << endl
+         << "T - Calculate the area of a PrintTriangle" << endl
          << "Q - Quit" << endl
          << endl
          << right << setw(25) << "Enter your choice: ";
