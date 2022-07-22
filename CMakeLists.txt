@@ -5,8 +5,8 @@ set(CMAKE_CXX_STANDARD 14)
 
 #add_executable(CS_150 main.cpp)
 
-#Homework 2
 #[[
+#Homework 2
 add_executable(UberCharge Module2/HW2/UberCharge/UberCharge.cpp)
 add_executable(HolidayGifts Module2/HW2/HolidayGifts/HolidayGifts.cpp)
 add_executable(Feet Module2/HW2/Feet/Feet.cpp)
@@ -42,10 +42,22 @@ add_executable(train Module6/Lab6/trainTickets.cpp)
 add_executable(CarRental Module7/Lab7/CarRental/CarRental.cpp)
 add_executable(GeometricFigure Module7/HW7/GeometricFigure/GeometricFigure.cpp)
 add_executable(TakeTheTrain Module7/HW7/TakeTheTrain/TakeTheTrain.cpp)
-]]
+
 #Module 8
 add_executable(GradeCounter Module8/HW8/GradeCounter/GradeCounter.cpp)
 add_executable(LoanPayoff Module8/HW8/LoanPayoff/LoanPayoff.cpp)
 add_executable(SavingAccountBalance Module8/HW8/SavingAccountBalance/SavingAccountBalance.cpp)
 
 add_executable(PrintTriangle Module8/Lab8/PrintTriangle/PrintTriangle.cpp)
+
+#Module 9
+add_executable(PopularBabyNames Module9/HW9/PopularBabyNames/PopularBabyNames.cpp)
+add_executable(Deduplication Module9/HW9/Deduplication/Deduplication.cpp)
+
+add_executable(iHateShopping Module9/Lab9/iHateShopping/iHateShopping.cpp)
+]]
+#Module 10
+add_executable(PrintTriangle Module10/HW10/PrintTriangle/PrintTriangle.cpp)
+add_executable(Temp Module10/HW10/ConvertingTemperatures/ConvertingTemperatures.cpp)
+add_executable(Fib Module10/HW10/Fibonacci/Fibonacci.cpp)
+add_executable(Rand Module10/HW10/Random/Random.cpp)
