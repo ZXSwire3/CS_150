@@ -33,36 +33,7 @@
 
 using namespace std ;
 
-void fibonacci(int seq)
-{
-    //instantiate variables
-    int previousNum = 0;
-    int currentNum;
-    int nextNum;
-    string fibonacciString;
-
-    for (int i = 0; i < seq; i++)
-    {
-        //add numbers to fibonacciString
-        fibonacciString.append((to_string(previousNum) + ", "));
-
-        if (i == 0)
-        {
-            previousNum = 1;
-            currentNum = 1;
-            nextNum = 2;
-        }
-        else
-        {
-            previousNum = currentNum;
-            currentNum = nextNum;
-            nextNum = previousNum + currentNum;
-        }
-    }
-    //remove ", "
-    fibonacciString.replace(fibonacciString.length() - 2, 2, "");
-    cout << "That Fibonacci sequence is: " << fibonacciString << endl << endl;
-}
+void fibonacci(int);
 
 int main()
 {
@@ -93,4 +64,35 @@ int main()
         }
     } while (number != 0);
     return 0;
+}
+
+void fibonacci(int seq)
+{
+    //instantiate variables
+    int previousNum = 0;
+    int currentNum;
+    int nextNum;
+    string fibonacciString;
+
+    for (int i = 0; i < seq; i++)
+    {
+        //add numbers to fibonacciString
+        fibonacciString.append((to_string(previousNum) + ", "));
+
+        if (i == 0)
+        {
+            previousNum = 1;
+            currentNum = 1;
+            nextNum = 2;
+        }
+        else
+        {
+            previousNum = currentNum;
+            currentNum = nextNum;
+            nextNum = previousNum + currentNum;
+        }
+    }
+    //remove ", "
+    fibonacciString.replace(fibonacciString.length() - 2, 2, "");
+    cout << "That Fibonacci sequence is: " << fibonacciString << endl << endl;
 }

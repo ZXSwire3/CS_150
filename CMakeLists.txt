@@ -55,9 +55,16 @@ add_executable(PopularBabyNames Module9/HW9/PopularBabyNames/PopularBabyNames.cp
 add_executable(Deduplication Module9/HW9/Deduplication/Deduplication.cpp)
 
 add_executable(iHateShopping Module9/Lab9/iHateShopping/iHateShopping.cpp)
-]]
+
 #Module 10
 add_executable(PrintTriangle Module10/HW10/PrintTriangle/PrintTriangle.cpp)
 add_executable(Temp Module10/HW10/ConvertingTemperatures/ConvertingTemperatures.cpp)
 add_executable(Fib Module10/HW10/Fibonacci/Fibonacci.cpp)
 add_executable(Rand Module10/HW10/Random/Random.cpp)
+
+#Module 11
+add_executable(GeometricFigure Module11/HW11/GeometricFigure/GeometricFigure.cpp)
+add_executable(Swap Module11/HW11/Swap/Swap.cpp)
+
+add_executable(SortStrings Module11/Lab11/SortStrings/SortStrings.cpp)
+]]

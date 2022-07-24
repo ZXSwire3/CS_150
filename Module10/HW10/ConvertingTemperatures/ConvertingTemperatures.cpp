@@ -26,33 +26,7 @@
 
 using namespace std ;
 
-void convert(double degrees, char scale)
-{
-    double celsius;
-    double fahrenheit;
-
-    cout << fixed << setprecision(1);
-    //switch on f or c
-    switch (scale)
-    {
-        case 'f':
-            //set fahrenheit to degrees
-            fahrenheit = degrees;
-            //Calculate celsius
-            celsius = 5 * (fahrenheit - 32) / 9.0;
-            //print out conversion
-            cout << fahrenheit << "° Fahrenheit is " << celsius << "° Celsius" << endl;
-            break;
-        case 'c':
-            //set celsius to degrees
-            celsius = degrees;
-            //Calculate fahrenheit
-            fahrenheit = (9 / 5.0) * celsius + 32;
-            //print out conversion
-            cout << celsius << "° Celsius is " << fahrenheit << "° Fahrenheit" << endl;
-            break;
-    }
-}
+void convert(double, char);
 
 int main()
 {
@@ -85,4 +59,32 @@ int main()
     } while (scale != 'q');
 
     return 0;
+}
+
+void convert(double degrees, char scale)
+{
+    double celsius;
+    double fahrenheit;
+
+    cout << fixed << setprecision(1);
+    //switch on f or c
+    switch (scale)
+    {
+        case 'f':
+            //set fahrenheit to degrees
+            fahrenheit = degrees;
+            //Calculate celsius
+            celsius = 5 * (fahrenheit - 32) / 9.0;
+            //print out conversion
+            cout << fahrenheit << "° Fahrenheit is " << celsius << "° Celsius" << endl;
+            break;
+        case 'c':
+            //set celsius to degrees
+            celsius = degrees;
+            //Calculate fahrenheit
+            fahrenheit = (9 / 5.0) * celsius + 32;
+            //print out conversion
+            cout << celsius << "° Celsius is " << fahrenheit << "° Fahrenheit" << endl;
+            break;
+    }
 }

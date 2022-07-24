@@ -22,30 +22,7 @@
 
 using namespace std ;
 
-void triangle(int width)
-{
-    //prints increasing rows
-    for (int rows = 0; rows <= width; rows++)
-    {
-        //prints the stars
-        for (int stars = 0; stars < rows; stars++)
-        {
-            cout << "*";
-        }
-        cout << endl;
-    }
-
-    //prints decreasing rows
-    for (int rows = width - 1; rows >= 0; rows--)
-    {
-        //prints the stars
-        for (int stars = 0; stars < rows; stars++)
-        {
-            cout << "*";
-        }
-        cout << endl;
-    }
-}
+void triangle(int);
 
 int main()
 {
@@ -84,4 +61,29 @@ int main()
     } while (width != 0);
 
     return 0;
+}
+
+void triangle(int width)
+{
+    //prints increasing rows
+    for (int rows = 0; rows <= width; rows++)
+    {
+        //prints the stars
+        for (int stars = 0; stars < rows; stars++)
+        {
+            cout << "*";
+        }
+        cout << endl;
+    }
+
+    //prints decreasing rows
+    for (int rows = width - 1; rows >= 0; rows--)
+    {
+        //prints the stars
+        for (int stars = 0; stars < rows; stars++)
+        {
+            cout << "*";
+        }
+        cout << endl;
+    }
 }

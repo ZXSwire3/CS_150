@@ -35,21 +35,7 @@
 
 using namespace std ;
 
-void printRandom(int min, int max, int count)
-{
-    //initialize random seed
-    unsigned int seed = time(0);
-    srand(seed);
-    //instantiate randomNum variable
-    int randomNum;
-    for (int i = 0; i < count; i++)
-    {
-        //generate random number each loop
-        randomNum = (rand() % (max - min + 1)) + min;
-        //print random number
-        cout << randomNum << endl;
-    }
-}
+void printRandom(int, int, int);
 
 int main()
 {
@@ -126,4 +112,20 @@ int main()
     printRandom(min, max, count);
 
     return 0;
+}
+
+void printRandom(int min, int max, int count)
+{
+    //initialize random seed
+    unsigned int seed = time(0);
+    srand(seed);
+    //instantiate randomNum variable
+    int randomNum;
+    for (int i = 0; i < count; i++)
+    {
+        //generate random number each loop
+        randomNum = (rand() % (max - min + 1)) + min;
+        //print random number
+        cout << randomNum << endl;
+    }
 }
