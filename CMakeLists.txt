@@ -68,3 +68,7 @@ add_executable(Swap Module11/HW11/Swap/Swap.cpp)
 
 add_executable(SortStrings Module11/Lab11/SortStrings/SortStrings.cpp)
 ]]
+#Module 12
+add_executable(GasTank Module12/HW12/GasTank/GasTank.cpp)
+
+add_executable(Travel Module12/Lab12/TravelByAir/TravelByAir.cpp)
