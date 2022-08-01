@@ -72,3 +72,9 @@ add_executable(SortStrings Module11/Lab11/SortStrings/SortStrings.cpp)
 add_executable(GasTank Module12/HW12/GasTank/GasTank.cpp)
 
 add_executable(Travel Module12/Lab12/TravelByAir/TravelByAir.cpp)
+
+#Module 13
+add_executable(Library Module13/HW13/Library/Library.cpp Module13/HW13/Library/Book.cpp)
+add_executable(MonthlyExpenses Module13/HW13/MonthlyExpenses/MonthlyExpense.cpp)
+
+add_executable(Date Module13/Lab13/DateTester.cpp Module13/Lab13/Date.cpp)
