@@ -43,6 +43,8 @@ void Date::checkDates() {
         Date::month = 1;
         Date::day = 1;
         Date::year = 2000;
+        cout << "Invalid date!" << endl
+             << "Changing date to default date..." << endl;
     }
 
     //checks to make sure that the number of days in a specific month is not more than it should be
@@ -59,6 +61,8 @@ void Date::checkDates() {
                 Date::month = 1;
                 Date::day = 1;
                 Date::year = 2000;
+                cout << "Invalid date!" << endl
+                     << "Changing date to default date..." << endl;
             }
             break;
             //30 days
@@ -70,6 +74,8 @@ void Date::checkDates() {
                 Date::month = 1;
                 Date::day = 1;
                 Date::year = 2000;
+                cout << "Invalid date!" << endl
+                     << "Changing date to default date..." << endl;
             }
             break;
             //29 days
@@ -78,12 +84,16 @@ void Date::checkDates() {
                 Date::month = 1;
                 Date::day = 1;
                 Date::year = 2000;
+                cout << "Invalid date!" << endl
+                     << "Changing date to default date..." << endl;
             }
             break;
         default:
             Date::month = 1;
             Date::day = 1;
             Date::year = 2000;
+            cout << "Invalid date!" << endl
+                 << "Changing date to default date..." << endl;
             break;
     }
 }

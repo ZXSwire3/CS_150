@@ -67,7 +67,7 @@ add_executable(GeometricFigure Module11/HW11/GeometricFigure/GeometricFigure.cpp
 add_executable(Swap Module11/HW11/Swap/Swap.cpp)
 
 add_executable(SortStrings Module11/Lab11/SortStrings/SortStrings.cpp)
-]]
+
 #Module 12
 add_executable(GasTank Module12/HW12/GasTank/GasTank.cpp)
 
@@ -78,3 +78,9 @@ add_executable(Library Module13/HW13/Library/Library.cpp Module13/HW13/Library/B
 add_executable(MonthlyExpenses Module13/HW13/MonthlyExpenses/MonthlyExpense.cpp)
 
 add_executable(Date Module13/Lab13/DateTester.cpp Module13/Lab13/Date.cpp)
+]]
+#Module 14
+add_executable(SecretMessage Module14/HW14/SecretMessage/SecretMessage.cpp)
+add_executable(GirlsSoccerTeam Module14/HW14/GirlsSoccerTeam/GirlsSoccerTeam.cpp)
+
+add_executable(ReverseElements Module14/Lab14/ReverseElements.cpp)
